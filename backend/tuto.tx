@@ -1,0 +1,17 @@
+cd backend
+npm init -y
+npm install express mysql2 bcrypt jsonwebtoken dotenv cors
+npm install -D typescript ts-node nodemon @types/express @types/node @types/bcrypt @types/jsonwebtoken @types/cors jest ts-jest supertest @types/jest @types/supertest
+npx tsc --init
+
+
+to read project support typescript,open 
+packaghe.json then add   "type": "module",
+
+add this 
+"module": "ES2020",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    to support import without .js

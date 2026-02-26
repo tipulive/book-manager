@@ -1,0 +1,26 @@
+@baseUrl = http://localhost:3000/api/auth
+@email=company@gmail.com
+@PhoneNumber=+250782389359
+@password=1
+@Auth_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJqb2huQGdtYWlsLmNvbSIsImlhdCI6MTc3MjEwMTg2NywiZXhwIjoxNzcyMTAyMTY3fQ.FIUPTB3CF0LTgAWL4SEcv217QQP6Kiyz1KQe_q4RJag"
+POST  {{baseUrl}}/register
+content-type: application/json;charset=UTF-8
+Authorization: Bearer {{Auth_token}}
+
+{
+"username": "john",
+"email": "john@gmail.com",
+"password": "123456"
+
+}
+
+### Try to access Proteted middleware
+POST  {{baseUrl}}/login
+content-type: application/json;charset=UTF-8
+Authorization: Bearer {{Auth_token}}
+
+{
+"email":"john@gmail.com",
+"password":"123456"
+
+}
